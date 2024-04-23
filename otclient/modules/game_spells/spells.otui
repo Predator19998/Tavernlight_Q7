@@ -1,0 +1,17 @@
+MiniWindow
+  id: botWindow
+  !text: tr('')
+  width: 300
+  height: 300
+  icon: /images/topbuttons/healthinfo
+  anchors.centerIn: parent
+  @onClose: modules.game_minimap.onMiniWindowClose()
+
+  MiniWindowContents  
+    Button
+      id: Jump
+      width: 50
+      !text: tr('Jump!')
+      anchors.right: parent.right
+      anchors.top: parent.top
+      @onClick: modules.game_spells.reset()
